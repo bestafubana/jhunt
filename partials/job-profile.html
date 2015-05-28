@@ -1,0 +1,38 @@
+
+<!--  New Position Form -->
+<form name="newProfileForm" ng-submit="addJob()">
+
+  <h4>Add a new open position</h4>
+  <fieldset id="formBox">
+    <fieldset>
+      <legend>Company</legend>
+      <input type="text" ng-model="job.company.name" placeholder="Company Name"/> <br/>
+      <input type="text" ng-model="job.company.website" placeholder="Company Website"/>
+    </fieldset>
+
+    <fieldset>
+      <legend>Contact Person</legend>
+      <input type="text" ng-model="job.contactPerson.firstName" placeholder="First Name"/>
+      <input type="text" ng-model="job.contactPerson.lastName" placeholder="Last Name"/>
+      <input type="text" ng-model="job.contactPerson.email" placeholder="Email"/>
+    </fieldset>
+
+    <input type="text" ng-model="job.link" placeholder="Link for the position page"/>
+    <input type="text" ng-model="job.position" placeholder="Position name"/>
+
+    <select ng-change="updateStars(job, newStars)" ng-model="newStars" class="" id="starsSelect">
+      <option value="-1"> - Rate your Excitement with the Position - </option>
+      <option value="1">&#9733;</option>
+      <option value="2">&#9733;&#9733;</option>
+      <option value="3">&#9733;&#9733;&#9733;</option>
+      <option value="4">&#9733;&#9733;&#9733;&#9733;</option>
+      <option value="5">&#9733;&#9733;&#9733;&#9733;&#9733;</option>
+    </select>
+    <br/>
+    <select ng-model="job.status" ng-options="statuses for statuses in statuses" title="Status">
+      <option value> - Process Stage - </option>
+    </select>
+
+    <input type="submit" value="Submit new Position" />
+  </fieldset>
+</form>

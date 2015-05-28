@@ -1,0 +1,205 @@
+* {
+	font-family: HelveticaNeue-Regular,"Helvetica Neue Regular","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;
+}
+
+body{
+	margin:0;
+}
+
+a {
+	color:#c91938;
+}
+
+a:hover {
+	color:#A10B25;
+}
+
+a:visited {
+	color:#7C0016;
+}
+
+
+table{
+	width:100%;
+	font-size: 0.8em;
+	border-spacing: 0;
+	border:5px solid #D6611B;
+}
+
+header{
+	padding:10px 2% 0;
+	background-color: #262626;
+	color:#fff;
+	position:fixed;
+	width:100%;
+	top:0px;
+	border-bottom:3px solid #c91938;
+	box-shadow:0px 0px 2px #000;
+}
+
+footer{
+	background-color: #262626;
+	color:#939393;
+	padding:5px 0;
+	margin-top: 20px;
+	border-top:3px solid #515151;
+	font-size: 0.7em;
+	text-align: center;
+}
+
+footer > p > a{
+	color:#ffffff;
+	text-decoration: none;
+}
+
+header h1{
+	margin-top:0;
+	margin-bottom:5px;
+}
+
+header h1::first-letter{
+	color:#c91938;
+	font-weight: 900;
+}
+
+div[role=main]{
+	margin:auto;
+	margin-top:76px;
+	padding:0 2%;
+}
+
+#jobListing{
+	width:65%;
+}
+
+aside{
+	width:33%;
+	float:right;
+	border:5px solid;
+	border-color: #D6D6D6;
+	padding: 0;
+}
+
+aside h2{
+	margin:0;
+	padding-top:5px;
+	padding-bottom:5px;
+	padding-left:10px;
+	background-color: #D6D6D6;
+}
+
+h1,h2,h3,h4{
+	font-weight: 200;
+}
+
+h2{
+	font-size: 1.2em;
+}
+
+h4{
+	margin-bottom:5px;
+}
+
+th,td{
+	padding:5px;
+}
+
+th{
+	font-weight: 200;
+	margin: 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
+}
+
+td{
+	cursor:pointer;
+}
+
+tbody tr td:nth-child(4){
+	/*border-left:1px solid;*/
+	text-align: center;
+	color:#E8AA46;
+}
+
+thead{
+	font-weight: bold;
+	background-color: #D6611B;
+  	color:white;
+}
+
+tbody tr:nth-child(even){
+	background-color: #FFF1EA;
+}
+
+tbody tr:hover{
+	background-color:#FFCAAF;
+}
+
+tr input[type=button]{
+	float:right;
+}
+
+input[type=text]{
+	width:180px;
+	display:block;
+	margin-bottom: 5px;
+}
+
+input[type=submit]{
+	float:right;
+}
+
+fieldset > fieldset > input[type=text]{
+	display:inline;
+	width:47%;
+}
+
+fieldset > fieldset{
+	width:47%;
+	float:left;
+	margin-bottom:10px;
+	border: none;
+}
+
+legend{
+	font-weight: 200;
+	font-size: 0.9em;
+}
+
+#formBox > input, #formBox > select{
+	margin-left:12px;
+}
+
+.btnIcon{
+	border:none;
+	margin-left: 3px;
+	height:18px;
+	background-color: #D6601B;
+	color:#fff;
+}
+
+select.star{
+	color:#E8AA46;
+}
+
+select option:nth-child(1){
+	color:#000;
+}
+
+ul{
+	list-style-type: none;
+}
+
+ul li{
+	margin-bottom:10px;
+	font-weight: 300;
+}
+
+em{
+	color:#e88246;
+	font-style: normal;
+	font-weight: 800;
+}
+
+
+

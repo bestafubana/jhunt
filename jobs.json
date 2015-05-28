@@ -1,0 +1,36 @@
+[
+  {
+    "company": {"name": "Google", "website": "http://google.com"},
+    "link": "https://www.google.com/about/careers/search#!t=jo&jid=94465001",
+    "position": "Developer Programs Engineer",
+    "statusIndex": 0,
+    "status": "Not Contacted",
+    "history": [{"description":"Not Contacted", "date": "2015-05-16T18:20:46.109Z" }],
+    "contactPerson": {"firstName": "John", "lastName": "Smith", "email": "johnnys@mymail.com"},
+    "stars": 3, 
+    "date": "2015-05-16T18:20:46.109Z"
+  },
+  {
+    "company": {"name": "Google", "website": "http://google.com"},
+    "link": "https://www.google.com/about/careers/search#!t=jo&jid=60305001",
+    "position": "Developer Advocate Cloud Platform",
+    "statusIndex": 1,
+    "status": "Resume/CL Sent",
+    "history": [{"description":"Resume/CL Sent", "date": "2015-05-16T18:20:46.109Z" }],
+    "contactPerson": {"firstName": "Joseph", "lastName": "Burns", "email": "jose@mymail.com"},
+    "stars": 2,
+    "date": "2015-05-16T18:20:46.109Z"
+  },
+  {
+    "company": {"name": "IBM", "website": "http://ibm.com"},
+    "link": "https://jobs3.netmedia1.com/cp/faces/job_summary?job_id=SYS-0741879",
+    "position": "Information Developer",
+    "statusIndex": 2,
+    "status": "Waiting Call for Interview",
+    "history": [{"description":"Waiting Call for Interview", "date": "2015-05-16T18:20:46.109Z" }],
+    "contactPerson": {"firstName": "Raymond", "lastName": "Rogers", "email": "ray@mymail.com"},
+    "stars": 4,
+    "date": "2015-05-16T18:20:46.109Z"
+  }
+
+]

@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html ng-app="jHunt">
+  <head>
+    <link rel="stylesheet" type="text/css" href="css/style.css" />
+
+    <script type="text/javascript" src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script type="text/javascript" src="angular.min.js"></script>
+    <script type="text/javascript" src="model.js"></script>
+    <script type="text/javascript" src="jobs.js"></script>
+    <script type="text/javascript" src="app.js"></script>
+  </head>
+
+  <body ng-controller="JHuntController as jhunt">
+    <!--  Store Header  -->
+    <header>
+      <h1>JHunt</h1>
+    </header>
+
+     <div role="main">
+      
+      <aside>
+        <h2>Hunt Status</h2>
+
+        <ul>
+          <li>You're competing for <em>{{jobs.length}}</em> jobs</li>
+          <li><em>{{countStatus(0)}}</em> positions need a first step</li>
+          <li>You're waiting for <em>{{countStatus(4)}}</em> final answers</li>
+        </ul>
+
+      </aside>
+
+      <!--  Job positions  -->
+      <section id="jobListing"> 
+        <h2>Job List</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Company</th>
+              <th>Position</th>
+              <th>Status</th>
+              <th>Rate</th>
+              <th></th>
+            </tr>
+          </thead>
+          <tbody>
+          <!--  Job Container  -->
+            <tr ng-repeat="job in jobs" ng-click="loadJobForm(job)">
+              <td><a href="{{job.company.website}}" target="_blank">{{job.company.name}}</a></td>
+              <td><a href="{{job.link}}" target="_blank">{{job.position}}</a></td>
+              <td>
+                {{job.status}} 
+                <input type="button" ng-click="setStatus(job,6)" ng-hide="isNotFinal(job)" value="&#10007;"  class="red btnIcon" title="Fail"/>
+                <input type="button" ng-click="setStatus(job,5)" ng-hide="isNotFinal(job)" value="&#10003;" class="green btnIcon" title="Success"/>
+                <input type="button" ng-click="advanceStatus(job)" ng-hide="isNotFinal(job)" value=">>" class="blue btnIcon" title="Advance"/>
+              </td>
+              <td ng-bind-html="starsToDisplay(job.stars)"></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table>
+      </section>
+      <job-profile></job-profile>
+      <fieldset id="jobLoader">
+        <legend>Load a Job</legend>
+        <select ng-model="jobSource" ng-options="jobSources for jobSources in jobSources">
+          <option value="-1"> - Select the source - </option>
+        </select>
+
+        <input type="text" ng-model="linkao"/>
+        <input type="button" ng-click="loadJobSO()" value="Go"/>
+      </fieldset>
+    </div>
+    <footer>
+      <p>
+        <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by-nc-nd/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-nc-nd/4.0/">Creative Commons Attribution-NonCommercial-NoDerivatives 4.0 International License</a>.
+      </p>
+      <p>Developed by <a href="#">Natanael Silva</a> - For fun and (NO) profit.</p>
+    </footer>
+
+  </body>
+</html>
