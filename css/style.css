@@ -7,11 +7,11 @@ body{
 }
 
 a {
-	color:#c91938;
+	color:#A10B25;
 }
 
 a:hover {
-	color:#A10B25;
+	color:#c91938;
 }
 
 a:visited {
@@ -28,7 +28,7 @@ table{
 
 header{
 	padding:10px 2% 0;
-	background-color: #262626;
+	background-color: #384047;
 	color:#fff;
 	position:fixed;
 	width:100%;
@@ -38,11 +38,11 @@ header{
 }
 
 footer{
-	background-color: #262626;
-	color:#939393;
+	background-color: #384047;
+	color:#8c989e;
 	padding:5px 0;
 	margin-top: 20px;
-	border-top:3px solid #515151;
+	border-top:3px solid #283036;
 	font-size: 0.7em;
 	text-align: center;
 }
@@ -127,12 +127,34 @@ thead{
   	color:white;
 }
 
+th h2{
+	margin:0;
+}
+
+thead th{
+	padding: 5px 0;
+}
+
+thead th:nth-child(1){
+	padding-bottom: 5px;
+    padding-top: 0;
+}
+
+thead tr + tr th{
+	border-top:1px solid white;
+}
+
 tbody tr:nth-child(even){
 	background-color: #FFF1EA;
 }
 
 tbody tr:hover{
-	background-color:#FFCAAF;
+	background-color:#384047;
+	color:white;
+}
+
+tbody tr:hover a{
+	color:white;
 }
 
 tr input[type=button]{
