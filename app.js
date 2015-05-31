@@ -30,6 +30,9 @@
     $scope.loadJobForm = function(job){
       $scope.job = job;
       $scope.newStars = job.stars;
+
+      $("#formBox").show();
+      $("h4 input").val("-");      
     };
 
     $scope.advanceStatus = function(job){
@@ -51,7 +54,7 @@
       var starsDisplay = "";
 
       for(var i=0; i < stars; i++){
-        starsDisplay += "&#9733;"
+        starsDisplay += "&hearts;"
       }
 
       return $sce.trustAsHtml(starsDisplay);
@@ -132,6 +135,18 @@
 
     $scope.loadJobLI = function(){
 
+    };
+
+    $scope.toggleForm = function(){
+      $("#formBox").toggle();
+      $scope.job = {};
+      $scope.newStars = -1;
+
+      if($("#formBox").css("display") == "none"){
+        $("h4 input").val("+");
+      }else{
+        $("h4 input").val("-");
+      }
     };
     // http://vancouver.craigslist.ca/van/web/5037412901.html
     // http://careers.stackoverflow.com/jobs/84266/software-developer-qhr-technologies

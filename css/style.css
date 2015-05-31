@@ -45,6 +45,8 @@ footer{
 	border-top:3px solid #283036;
 	font-size: 0.7em;
 	text-align: center;
+	clear:both;
+	width:100%;
 }
 
 footer > p > a{
@@ -66,6 +68,7 @@ div[role=main]{
 	margin:auto;
 	margin-top:76px;
 	padding:0 2%;
+	overflow: auto;
 }
 
 #jobListing{
@@ -78,6 +81,7 @@ aside{
 	border:5px solid;
 	border-color: #D6D6D6;
 	padding: 0;
+	margin-bottom:20px;
 }
 
 aside h2{
@@ -86,6 +90,12 @@ aside h2{
 	padding-bottom:5px;
 	padding-left:10px;
 	background-color: #D6D6D6;
+}
+
+aside fieldset{
+	padding: 0;
+	border:none;
+	/*border: 5px solid #D6D6D6;*/
 }
 
 h1,h2,h3,h4{
@@ -118,7 +128,7 @@ td{
 tbody tr td:nth-child(4){
 	/*border-left:1px solid;*/
 	text-align: center;
-	color:#E8AA46;
+	color:#Da415d;
 }
 
 thead{
@@ -165,6 +175,15 @@ input[type=text]{
 	width:180px;
 	display:block;
 	margin-bottom: 5px;
+}
+
+select{
+	width:188px;
+	display:block;
+	margin-bottom: 5px;
+	border-radius: 0px;
+	border: 1px solid;
+	height: 22px;
 }
 
 input[type=submit]{
@@ -223,5 +242,27 @@ em{
 	font-weight: 800;
 }
 
+label{
+	display:block;
+	font-weight: 200;
+	font-size: 0.8em;
+}
 
+#formBox label{
+	display:inline-block;
+}
+
+#formBox{
+	margin-bottom:10px;
+}
+
+#formBox hr{
+	background:#333 linear-gradient(to right, #ccc, #333, #ccc) repeat scroll 0 0;
+	border:none;
+	height: 1px;
+}
+
+job-profile h4{
+	cursor:pointer;
+}
 
