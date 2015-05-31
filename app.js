@@ -74,6 +74,23 @@
       return count;
     }
 
+    $scope.countNotStatuses = function(statusIndexes){
+      var count = 0;
+      for(var i=0; i<$scope.jobs.length; i++){
+        var notStatus = true;
+        for(var j=0; j<statusIndexes.length; j++){
+          if($scope.jobs[i].statusIndex == statusIndexes[j]){
+            notStatus = false;
+            break;
+          }
+        }
+        if(notStatus){
+            count++;
+        }
+      }
+      return count;
+    }
+
     $scope.loadJob = function(){
       if($scope.jobSource == jobSources[0]){
         loadJobSO();
